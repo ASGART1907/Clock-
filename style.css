@@ -1,0 +1,61 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock{
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://cdn.pixabay.com/photo/2019/11/25/06/21/leaf-4651088_1280.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.clock-face{
+  position: relative;
+  background-color: rgba(10,10,200,0.2);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 10px solid limegreen;
+  display: flex;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.hand{
+  position: absolute;
+  width: 50%;
+  height:6px;
+  top: 49%;
+  background-color: black;
+  transform-origin: 100%;
+  transition: all 0.05s;
+  transform:rotate(90deg);
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  border-radius: 50% 0 0 50%;
+}
+
+.circle{
+  position: absolute;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  z-index: 5;
+  background-color: limegreen;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+}
+
